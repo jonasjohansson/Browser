@@ -1,8 +1,8 @@
 {
-  "name": "Browser",
-  "productName": "Browser",
-  "version": "1.1.5",
-  "description": "Minimal bookmark browser",
+  "name": "Foka",
+  "productName": "Foka",
+  "version": "0.1",
+  "description": "Minimal bookmark browser for focused work",
   "license": "MIT",
   "author": {
     "name": "Jonas Johansson",
@@ -32,7 +32,7 @@
   },
   "build": {
     "files": ["**/*"],
-    "appId": "se.jonasjohansson.browser",
+    "appId": "se.jonasjohansson.foka",
     "mac": {
       "category": "public.app-category.social-networking",
       "target": ["dir"],
