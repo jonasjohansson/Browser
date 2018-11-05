@@ -2,10 +2,10 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require('electron');
 const { download } = require('electron-dl');
 const electron = require('electron');
-const tray = require('./js/tray');
-const menu = require('./js/menu');
-const config = require('./js/config');
-const watcher = require('./js/watcher');
+const tray = require('./tray');
+const menu = require('./menu');
+const config = require('./config');
+const watcher = require('./watcher');
 
 // app.disableHardwareAcceleration();
 // download.directory = app.getPath('desktop');
