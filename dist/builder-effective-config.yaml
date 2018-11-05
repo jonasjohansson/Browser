@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+files:
+  - '**/*'
+appId: se.jonasjohansson.browser
+mac:
+  category: public.app-category.social-networking
+  target:
+    - dir
+  electronUpdaterCompatibility: '>=2.16.0'
+electronVersion: 3.0.7

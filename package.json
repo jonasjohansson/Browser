@@ -1,0 +1,42 @@
+{
+  "name": "Browser",
+  "productName": "Browser",
+  "version": "1.1.5",
+  "description": "Minimal bookmark browser",
+  "license": "MIT",
+  "author": {
+    "name": "Jonas Johansson",
+    "email": "jns.johansson@gmail.com",
+    "url": "jonasjohansson.se"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "electron-context-menu": "^0.10.1",
+    "electron-dl": "^1.11.0",
+    "electron-store": "^2.0.0",
+    "event-emitter-es6": "^1.1.5",
+    "favicon-url": "^0.0.5",
+    "md5": "^2.2.1",
+    "node-watch": "^0.5.8"
+  },
+  "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-builder": "^20.31.2"
+  },
+  "xo": {
+    "envs": ["node", "browser"]
+  },
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder --mac"
+  },
+  "build": {
+    "files": ["**/*"],
+    "appId": "se.jonasjohansson.browser",
+    "mac": {
+      "category": "public.app-category.social-networking",
+      "target": ["dir"],
+      "electronUpdaterCompatibility": ">=2.16.0"
+    }
+  }
+}

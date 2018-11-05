@@ -1,0 +1,149 @@
+:root {
+	--base: 24px;
+	--aside-width: 50px;
+	--font-family: system-ui, sans-serif;
+}
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: none;
+}
+
+html,
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: var(--font-family);
+	background-color: white;
+}
+
+input {
+	color: inherit;
+}
+
+button {
+	background-color: transparent;
+}
+
+/* main, aside */
+
+main,
+aside {
+	float: left;
+}
+
+aside:after,
+main:after,
+aside > div:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+/* main */
+
+main {
+	position: absolute;
+	left: var(--aside-width);
+	width: calc(100% - var(--aside-width));
+	height: 100%;
+	background-color: white;
+}
+
+webview {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: inline-flex !important;
+}
+
+/* aside */
+
+aside {
+	position: fixed;
+	height: 100%;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	color: gray;
+}
+
+.bookmark {
+	height: calc(var(--base) * 2);
+	line-height: calc(var(--base) * 2);
+}
+
+.bookmark > * {
+	float: left;
+	display: block;
+}
+
+.bookmark:not(.active) .icon {
+	opacity: 0.3;
+}
+
+.bookmark .url,
+.bookmark .icon {
+	height: 100%;
+}
+
+.bookmark .url {
+	width: calc(var(--aside-width) * 3);
+	padding: calc(var(--base) / 2);
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+.bookmark .icon {
+	position: relative;
+	width: var(--aside-width);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50%;
+	/*background-image: url('./assets/trayTemplate.png');*/
+	font-size: var(--base);
+	text-align: center;
+	cursor: pointer;
+}
+
+.bookmark.active {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bookmark.unread .icon:before {
+	opacity: 0.2;
+	width: calc(var(--base) / 3);
+}
+
+.bookmark.is-muted .icon {
+	filter: grayscale(100%);
+}
+
+/* classes */
+
+html:not(.dark-mode) aside {
+	background-color: rgba(0, 0, 0, 0.05);
+	color: black;
+}
+
+html.dark-mode aside {
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+}
+
+webview.hidden {
+	top: -100vh;
+}
+
+/* fixes */
+
+::-webkit-scrollbar {
+	display: none;
+}
