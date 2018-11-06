@@ -49,7 +49,7 @@ module.exports = new Store({
 				isMuted: false
 			},
 			{
-				url: 'https://web.whatsapp.com/',
+				url: 'https://trello.com/',
 				icon: '',
 				isMuted: false
 			},
