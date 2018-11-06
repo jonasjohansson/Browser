@@ -3,8 +3,8 @@ const electron = require('electron');
 
 let tray = null;
 
-const trayIconDefault = `${__dirname}/icons/menubarDefaultTemplate.png`;
-const trayIconStop = `${__dirname}/icons/menubarStopTemplate.png`;
+const trayIconDefault = `${__dirname}/icons/trayIcon.png`;
+const trayIconUnread = `${__dirname}/icons/trayIconUnread.png`;
 
 exports.create = win => {
 	const toggleWin = () => {
@@ -16,6 +16,7 @@ exports.create = win => {
 };
 
 exports.setBadge = shouldDisplayUnread => {
-	const icon = shouldDisplayUnread ? trayIconStop : trayIconDefault;
+	console.log(shouldDisplayUnread);
+	const icon = shouldDisplayUnread ? trayIconUnread : trayIconDefault;
 	tray.setImage(icon);
 };
