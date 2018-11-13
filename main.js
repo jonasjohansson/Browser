@@ -112,9 +112,10 @@ const createShortcuts = () => {
 	});
 };
 
-ipcMain.on('page-title-updated', (event, arg) => {
-	app.setBadgeCount(arg);
-	tray.setBadge(arg);
+ipcMain.on('page-title-updated', (events, args) => {
+	console.log(args);
+	app.setBadgeCount(args);
+	tray.setBadge(args);
 });
 
 ipcMain.on('quit', () => {

@@ -10,7 +10,7 @@ module.exports = new Store({
 			height: 600
 		},
 		darkMode: false,
-		showUnreadBadge: false,
+		showUnreadBadge: true,
 		alwaysOnTop: false,
 		bookmarks: [
 			{
@@ -49,7 +49,12 @@ module.exports = new Store({
 				isMuted: false
 			},
 			{
-				url: 'https://web.whatsapp.com/',
+				url: 'https://slack.com/',
+				icon: '',
+				isMuted: false
+			},
+			{
+				url: 'https://trello.com/',
 				icon: '',
 				isMuted: false
 			},

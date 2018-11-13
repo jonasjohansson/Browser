@@ -28,11 +28,15 @@
         "dist": "electron-builder --mac"
     },
     "build": {
-        "files": ["**/*"],
+        "files": [
+            "**/*"
+        ],
         "appId": "se.jonasjohansson.foka",
         "mac": {
             "category": "public.app-category.social-networking",
-            "target": ["dir"],
+            "target": [
+                "dir"
+            ],
             "electronUpdaterCompatibility": ">=2.16.0"
         }
     }
