@@ -3,8 +3,8 @@ const electron = require('electron');
 
 let tray = null;
 
-const trayIconDefault = `${__dirname}/icons/menubarDefaultTemplate.png`;
-const trayIconStop = `${__dirname}/icons/menubarStopTemplate.png`;
+const trayIconDefault = `${__dirname}/icons/trayIcon.png`;
+const trayIconUnread = `${__dirname}/icons/trayIconUnread.png`;
 
 exports.create = win => {
     const toggleWin = () => {
