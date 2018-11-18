@@ -1,6 +1,6 @@
 {
-    "name": "Foka",
-    "productName": "Foka",
+    "name": "Browser",
+    "productName": "Browser",
     "version": "1.0.0",
     "description": "Minimal bookmark browser for focused work",
     "license": "MIT",
@@ -21,22 +21,18 @@
     },
     "devDependencies": {
         "electron": "^3.0.7",
-        "electron-builder": "^20.31.2"
+        "electron-builder": "^20.36.2"
     },
     "scripts": {
         "postinstall": "electron-builder install-app-deps",
         "dist": "electron-builder --mac"
     },
     "build": {
-        "files": [
-            "**/*"
-        ],
-        "appId": "se.jonasjohansson.foka",
+        "files": ["**/*"],
+        "appId": "se.jonasjohansson.browser",
         "mac": {
             "category": "public.app-category.social-networking",
-            "target": [
-                "dir"
-            ],
+            "target": ["dir"],
             "electronUpdaterCompatibility": ">=2.16.0"
         }
     }

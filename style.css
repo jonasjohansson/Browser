@@ -31,6 +31,18 @@ button {
 	background-color: transparent;
 }
 
+/* menu */
+
+menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--base);
+	-webkit-app-region: drag;
+	z-index: 10000;
+}
+
 /* main, aside */
 
 main,

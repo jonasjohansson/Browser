@@ -46,6 +46,9 @@ const createWindow = () => {
 		skipTaskBar: true,
 		autoHideMenuBar: true,
 		darkTheme: true,
+		titleBarStyle: 'customButtonsOnHover',
+		transparent: true,
+		frame: true,
 		alwaysOnTop: config.get('alwaysOnTop'),
 		webPreferences: {
 			nodeIntegration: true,
@@ -71,49 +74,14 @@ const showWindow = () => {
 };
 
 const createShortcuts = () => {
-	globalShortcut.register('CommandOrControl+0', () => {
-		win.webContents.send('showBookmark', 9);
-	});
-
-	globalShortcut.register('CommandOrControl+1', () => {
-		win.webContents.send('showBookmark', 0);
-	});
-
-	globalShortcut.register('CommandOrControl+2', () => {
-		win.webContents.send('showBookmark', 1);
-	});
-
-	globalShortcut.register('CommandOrControl+3', () => {
-		win.webContents.send('showBookmark', 2);
-	});
-
-	globalShortcut.register('CommandOrControl+4', () => {
-		win.webContents.send('showBookmark', 3);
-	});
-
-	globalShortcut.register('CommandOrControl+5', () => {
-		win.webContents.send('showBookmark', 4);
-	});
-
-	globalShortcut.register('CommandOrControl+6', () => {
-		win.webContents.send('showBookmark', 5);
-	});
-
-	globalShortcut.register('CommandOrControl+7', () => {
-		win.webContents.send('showBookmark', 6);
-	});
-
-	globalShortcut.register('CommandOrControl+8', () => {
-		win.webContents.send('showBookmark', 7);
-	});
-
-	globalShortcut.register('CommandOrControl+9', () => {
-		win.webContents.send('showBookmark', 8);
-	});
+	for (let i = 1; i < 10; i++) {
+		globalShortcut.register(`CommandOrControl+${i}`, () => {
+			win.webContents.send('showBookmark', i - 1);
+		});
+	}
 };
 
 ipcMain.on('page-title-updated', (events, args) => {
-	console.log(args);
 	app.setBadgeCount(args);
 	tray.setBadge(args);
 });
