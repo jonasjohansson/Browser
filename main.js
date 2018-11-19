@@ -43,16 +43,12 @@ const createWindow = () => {
 		height: lastWindowState.height,
 		minWidth: 400,
 		minHeight: 200,
-		skipTaskBar: true,
-		autoHideMenuBar: true,
-		darkTheme: true,
 		titleBarStyle: 'customButtonsOnHover',
-		transparent: true,
-		frame: true,
+		frame: false,
 		alwaysOnTop: config.get('alwaysOnTop'),
 		webPreferences: {
-			nodeIntegration: true,
-			experimentalCanvasFeatures: true
+			nodeIntegration: true
+			// experimentalCanvasFeatures: true
 		}
 	});
 

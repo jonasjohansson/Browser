@@ -98,7 +98,8 @@ aside {
 }
 
 .bookmark:not(.active) .icon {
-	opacity: 0.3;
+	opacity: 0.2;
+	filter: saturate(0);
 }
 
 .bookmark .url,

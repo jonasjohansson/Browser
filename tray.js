@@ -16,6 +16,6 @@ exports.create = win => {
 };
 
 exports.setBadge = shouldDisplayUnread => {
-    const icon = shouldDisplayUnread ? trayIconStop : trayIconDefault;
+    const icon = shouldDisplayUnread ? trayIconUnread : trayIconDefault;
     tray.setImage(icon);
 };
