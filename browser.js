@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		createBookmark(bookmarkData);
 	}
 
-	// showBookmark(0);
+	showBookmark(0);
 	setDarkMode();
 });
 
