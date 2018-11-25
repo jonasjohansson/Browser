@@ -36,8 +36,8 @@ button {
 menu {
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100%;
+	left: var(--aside-width);
+	width: calc(100% - var(--aside-width));
 	height: var(--base);
 	-webkit-app-region: drag;
 	z-index: 10000;
