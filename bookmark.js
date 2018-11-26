@@ -48,12 +48,9 @@ class Bookmark extends EventEmitter {
             const href = url.href;
             const protocol = url.protocol;
             if (protocol === 'http:' || protocol === 'https:') {
-                // console.log(href);
-                if (href.includes('accounts.google.com') || href.includes('drive?authuser')) {
-                    this.view.src = href;
-                } else {
-                    shell.openExternal(href);
-                }
+                console.log(href);
+                if (href.includes('accounts.google.com') || href.includes('?authuser')) this.view.src = href;
+                else shell.openExternal(href);
             }
         });
 
