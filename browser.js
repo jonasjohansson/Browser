@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	showBookmark(0);
-	setDarkMode();
+
+	document.documentElement.classList.toggle('dark-mode', config.get('darkMode'));
 });
 
 function createBookmark(data) {
@@ -62,57 +63,18 @@ var showBookmark = index => {
 	bookmarks[index].handleIcon.click();
 };
 
-var getIndex = () => {
-	var arr = currentBookmark.handle.parentNode.children;
-	return Array.from(arr).indexOf(currentBookmark.handle);
-};
-
-var reload = () => {
+ipcRenderer.on('reload', () => {
 	currentBookmark.reload();
-};
+});
 
-var back = () => {
+ipcRenderer.on('back', () => {
 	currentBookmark.back();
-};
+});
 
-var forward = () => {
+ipcRenderer.on('forward', () => {
 	currentBookmark.forward();
-};
-
-var setDarkMode = () => {
-	document.documentElement.classList.toggle('dark-mode', config.get('darkMode'));
-};
-
-var next = () => {
-	let index = getIndex();
-	index = index < bookmarks.length - 1 ? index + 1 : 0;
-	showBookmark(index);
-};
-
-var previous = () => {
-	let index = getIndex();
-	index = index > 0 ? index - 1 : bookmarks.length - 1;
-	showBookmark(index);
-};
-
-var reset = () => {
-	config.clear();
-};
-
-var openConfig = () => {
-	config.openInEditor();
-};
-
-ipcRenderer.on('reload', reload);
-
-ipcRenderer.on('back', back);
-
-ipcRenderer.on('forward', forward);
+});
 
 ipcRenderer.on('showBookmark', (event, arg) => {
 	showBookmark(arg);
 });
-
-ipcRenderer.on('reset', reset);
-
-ipcRenderer.on('open-config', openConfig);

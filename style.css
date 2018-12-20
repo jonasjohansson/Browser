@@ -120,7 +120,6 @@ aside {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 50%;
-	/*background-image: url('./assets/trayTemplate.png');*/
 	font-size: var(--base);
 	text-align: center;
 	cursor: pointer;

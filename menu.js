@@ -11,18 +11,21 @@ function sendAction(action, arg = null) {
 }
 
 const appMenu = [
-	{ role: 'about' },
-	{ type: 'separator' },
-	// {
-	// 	label: 'Show Unread Badge',
-	// 	type: 'checkbox',
-	// 	checked: config.get('showUnreadBadge'),
-	// 	click() {
-	// 		config.set('showUnreadBadge', !config.get('showUnreadBadge'));
-	// 	}
-	// },
+	// { role: 'about' },
 	// { type: 'separator' },
-	// { role: 'services', submenu: [] },
+	{
+		label: 'Preferences…',
+		accelerator: 'Cmd+,',
+		click() {
+			config.openInEditor();
+		}
+	},
+	{
+		label: 'Icons…',
+		click() {
+			shell.openItem('./lookup.js');
+		}
+	},
 	{ type: 'separator' },
 	{ role: 'hide' },
 	{ role: 'hideothers' },
@@ -55,46 +58,7 @@ const bookmarkMenu = [
 	}
 ];
 
-const viewMenu = [
-	{
-		label: 'Toggle Settings',
-		accelerator: 'Cmd+Shift+S',
-		click() {
-			sendAction('open-config');
-		}
-	}
-];
-
-const windowMenu = [
-	{ role: 'minimize' },
-	{ role: 'close' }
-	// { type: 'separator' }
-	// {
-	// 	label: 'Select Next Bookmark',
-	// 	accelerator: 'Ctrl+Tab',
-	// 	click() {
-	// 		sendAction('next');
-	// 	}
-	// },
-	// {
-	// 	label: 'Select Previous Bookmark',
-	// 	accelerator: 'Ctrl+Shift+Tab',
-	// 	click() {
-	// 		sendAction('previous');
-	// 	}
-	// },
-	// { type: 'separator' },
-	// {
-	// 	type: 'checkbox',
-	// 	label: 'Always on Top',
-	// 	accelerator: 'Cmd+Shift+T',
-	// 	checked: config.get('alwaysOnTop'),
-	// 	click(item, focusedWindow) {
-	// 		config.set('alwaysOnTop', item.checked);
-	// 		focusedWindow.setAlwaysOnTop(item.checked);
-	// 	}
-	// }
-];
+const windowMenu = [{ role: 'minimize' }, { role: 'close' }];
 
 const helpMenu = [
 	{
@@ -110,14 +74,7 @@ const helpMenu = [
 		}
 	},
 	{ type: 'separator' },
-	{ role: 'toggledevtools' },
-	{ type: 'separator' },
-	{
-		label: 'Reset Bookmarks',
-		click() {
-			sendAction('reset');
-		}
-	}
+	{ role: 'toggledevtools' }
 ];
 
 const menu = [
@@ -131,10 +88,6 @@ const menu = [
 	{
 		label: 'Bookmark',
 		submenu: bookmarkMenu
-	},
-	{
-		label: 'View',
-		submenu: viewMenu
 	},
 	{
 		role: 'window',
