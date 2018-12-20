@@ -1,5 +1,5 @@
 'use strict';
-const dir = './icons/';
+const dir = './assets/icons/';
 const lookup = {
 	calendar: dir + 'icons8-calendar-color.svg',
 	contacts: dir + 'icons8-contacts-color.svg',

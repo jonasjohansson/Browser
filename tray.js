@@ -3,8 +3,8 @@ const electron = require('electron');
 
 let tray = null;
 
-const trayIconDefault = `${__dirname}/icons/trayIcon.png`;
-const trayIconUnread = `${__dirname}/icons/trayIconUnread.png`;
+const trayIconDefault = `${__dirname}/assets/icons/trayIcon.png`;
+const trayIconUnread = `${__dirname}/assets/icons/trayIconUnread.png`;
 
 exports.create = win => {
     tray = new electron.Tray(trayIconDefault);
