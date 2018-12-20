@@ -17,22 +17,26 @@
         "event-emitter-es6": "^1.1.5",
         "favicon-url": "^0.0.5",
         "md5": "^2.2.1",
-        "node-watch": "^0.5.8"
+        "node-watch": "^0.5.9"
     },
     "devDependencies": {
-        "electron": "^3.0.7",
-        "electron-builder": "^20.36.2"
+        "electron": "^3.0.13",
+        "electron-builder": "^20.38.4"
     },
     "scripts": {
         "postinstall": "electron-builder install-app-deps",
         "dist": "electron-builder --mac"
     },
     "build": {
-        "files": ["**/*"],
+        "files": [
+            "**/*"
+        ],
         "appId": "se.jonasjohansson.browser",
         "mac": {
             "category": "public.app-category.social-networking",
-            "target": ["dir"],
+            "target": [
+                "dir"
+            ],
             "electronUpdaterCompatibility": ">=2.16.0"
         }
     }
