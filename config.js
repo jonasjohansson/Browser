@@ -14,44 +14,54 @@ module.exports = new Store({
 		alwaysOnTop: false,
 		bookmarks: [
 			{
-				url: 'https://messenger.com/',
-				isMuted: false
+				url: 'https://messenger.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://gmail.com/',
-				isMuted: false
+				url: 'https://gmail.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://calendar.google.com/',
-				isMuted: false
+				url: 'https://calendar.google.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://drive.google.com/drive/',
-				isMuted: false
+				url: 'https://drive.google.com/drive/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://docs.google.com/document/',
-				isMuted: false
+				url: 'https://docs.google.com/document/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://docs.google.com/spreadsheets/',
-				isMuted: false
+				url: 'https://docs.google.com/spreadsheets/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://contacts.google.com/',
-				isMuted: false
+				url: 'https://contacts.google.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://slack.com/',
-				isMuted: false
+				url: 'https://slack.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://trello.com/',
-				isMuted: false
+				url: 'https://trello.com/'
+				// isMuted: false,
+				// icon: ''
 			},
 			{
-				url: 'https://www.notion.so/',
-				isMuted: false
+				url: 'https://www.notion.so/'
+				// isMuted: false,
+				// icon: ''
 			}
 		]
 	}

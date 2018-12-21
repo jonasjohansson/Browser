@@ -74,7 +74,13 @@ const helpMenu = [
 		}
 	},
 	{ type: 'separator' },
-	{ role: 'toggledevtools' }
+	{ role: 'toggledevtools' },
+	{
+		label: 'Reset',
+		click() {
+			config.clear();
+		}
+	}
 ];
 
 const menu = [
