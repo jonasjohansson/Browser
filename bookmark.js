@@ -98,9 +98,9 @@ class Bookmark extends EventEmitter {
 	}
 
 	getIcon(url) {
-		for (const entry in lookup) {
-			if (url.includes(entry)) {
-				this.setIcon(iconPath + lookup[entry]);
+		for (let entry of lookup) {
+			if (url.includes(entry[0])) {
+				this.setIcon(iconPath + entry[1]);
 				return;
 			}
 		}

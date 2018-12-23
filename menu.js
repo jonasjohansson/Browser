@@ -2,6 +2,7 @@
 const electron = require('electron');
 const path = require('path');
 const config = require('./config');
+const lookup = require('./lookup');
 
 const { app, BrowserWindow, shell } = electron;
 const appName = app.getName();
@@ -24,8 +25,7 @@ const appMenu = [
 	{
 		label: 'Icons…',
 		click() {
-			let lookupPath = path.join(__dirname, '.', 'lookup.js');
-			shell.openItem(lookupPath);
+			lookup.openInEditor();
 		}
 	},
 	{ type: 'separator' },
