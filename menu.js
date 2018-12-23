@@ -1,5 +1,6 @@
 'use strict';
 const electron = require('electron');
+const path = require('path');
 const config = require('./config');
 
 const { app, BrowserWindow, shell } = electron;
@@ -23,7 +24,8 @@ const appMenu = [
 	{
 		label: 'Icons…',
 		click() {
-			shell.openItem('./lookup.js');
+			let lookupPath = path.join(__dirname, '.', 'lookup.js');
+			shell.openItem(lookupPath);
 		}
 	},
 	{ type: 'separator' },

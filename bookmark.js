@@ -4,6 +4,8 @@ const faviconUrl = require('favicon-url');
 const EventEmitter = require('event-emitter-es6');
 const lookup = require('./lookup');
 
+const iconPath = './assets/icons/';
+
 class Bookmark extends EventEmitter {
 	constructor(data) {
 		super();
@@ -98,7 +100,7 @@ class Bookmark extends EventEmitter {
 	getIcon(url) {
 		for (const entry in lookup) {
 			if (url.includes(entry)) {
-				this.setIcon(lookup[entry]);
+				this.setIcon(iconPath + lookup[entry]);
 				return;
 			}
 		}

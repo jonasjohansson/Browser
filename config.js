@@ -49,7 +49,7 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://slack.com/'
+				url: 'https://tiny-massive.slack.com/'
 				// isMuted: false,
 				// icon: ''
 			},
