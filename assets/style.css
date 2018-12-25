@@ -1,6 +1,6 @@
 :root {
-	--base: 24px;
-	--aside-width: 50px;
+	--base: 20px;
+	--aside-width: 40px;
 	--font-family: system-ui, sans-serif;
 }
 
@@ -84,7 +84,6 @@ aside {
 	height: 100%;
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
 	box-sizing: border-box;
-	color: gray;
 }
 
 .bookmark {
@@ -119,7 +118,7 @@ aside {
 	width: var(--aside-width);
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 50%;
+	background-size: 60%;
 	font-size: var(--base);
 	text-align: center;
 	cursor: pointer;
