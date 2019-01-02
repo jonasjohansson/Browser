@@ -67,6 +67,10 @@ ipcRenderer.on('reload', () => {
 	currentBookmark.reload();
 });
 
+ipcRenderer.on('reloadAll', () => {
+	for (let bookmark of bookmarks) bookmark.reload();
+});
+
 ipcRenderer.on('back', () => {
 	currentBookmark.back();
 });

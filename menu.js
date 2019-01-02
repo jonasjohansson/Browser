@@ -45,6 +45,13 @@ const bookmarkMenu = [
 		}
 	},
 	{
+		label: 'Reload All',
+		accelerator: 'Cmd+Shift+R',
+		click() {
+			sendAction('reloadAll');
+		}
+	},
+	{
 		label: 'Back',
 		accelerator: 'Cmd+LeftArrow',
 		click() {
