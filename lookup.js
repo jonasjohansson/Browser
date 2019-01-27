@@ -20,7 +20,7 @@ module.exports = new Store({
 		pinterest: 'icons8-pinterest.svg',
 		pocketcasts: 'pocketcasts.png',
 		sheets: 'icons8-google-sheets-color.svg',
-		slack: 'icons8-slack-color.svg',
+		slack: 'Slack_Mark_Monochrome_Black.svg',
 		spotify: 'icons8-spotify.svg',
 		trello: 'icons8-trello.svg',
 		whatsapp: 'icons8-whatsapp.svg'
