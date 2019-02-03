@@ -1,8 +1,8 @@
 const { shell, dialog } = require('electron').remote;
 const { URL } = require('url');
 const faviconUrl = require('favicon-url');
-const EventEmitter = require('event-emitter-es6');
 const lookup = require('./lookup');
+const EventEmitter = require('event-emitter-es6');
 
 const iconPath = './assets/icons/';
 
@@ -16,23 +16,13 @@ class Bookmark extends EventEmitter {
 		this.view = new WebView();
 		this.view.autosize = true;
 		this.view.allowpopups = true;
-		// this.view.plugins = true;
 
 		this.handleIcon = document.createElement('div');
 		this.handleIcon.classList.add('icon');
-		// this.handleIcon.draggable = true;
 
 		this.view.src = this.addHTTP(data.url);
 
-		// if (data.icon === '' || data.icon === null) {
-		// if (data.url !== '') {
 		this.getIcon(this.view.src);
-		// }
-		// } else {
-		// this.setIcon(data.icon);
-		// }
-
-		// this.handle.classList.toggle('is-muted', data.isMuted);
 
 		this.handle.appendChild(this.handleIcon);
 

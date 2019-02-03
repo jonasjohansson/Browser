@@ -88,6 +88,7 @@ const helpMenu = [
 		label: 'Reset',
 		click() {
 			config.clear();
+			lookup.clear();
 		}
 	}
 ];
