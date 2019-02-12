@@ -23,6 +23,8 @@ module.exports = new Store({
 		slack: 'Slack_Mark_Monochrome_Black.svg',
 		spotify: 'icons8-spotify.svg',
 		trello: 'icons8-trello.svg',
-		whatsapp: 'icons8-whatsapp.svg'
+		whatsapp: 'icons8-whatsapp.svg',
+		translate: 'icons8-google-translate.svg',
+		keep: 'icons8-google-keep.svg'
 	}
 });
