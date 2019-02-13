@@ -19,7 +19,7 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://gmail.com/'
+				url: 'https://keep.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
@@ -34,35 +34,11 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://docs.google.com/document/'
+				url: 'https://translate.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
-			{
-				url: 'https://docs.google.com/spreadsheets/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
-				url: 'https://contacts.google.com/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
-				url: 'https://tiny-massive.slack.com/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
-				url: 'https://trello.com/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
-				url: 'https://www.notion.so/'
-				// isMuted: false,
-				// icon: ''
-			}
+
 		]
 	}
 });
