@@ -39,7 +39,7 @@ class Bookmark extends EventEmitter {
 			const protocol = url.protocol;
 			if (protocol === 'http:' || protocol === 'https:') {
 				console.log(href);
-				if (href.includes('accounts.google.com') || href.includes('?authuser')) this.view.src = href;
+				if (href.includes('accounts.google.com') || href.includes('https://mail.google.com/mail/') || href.includes('?authuser')) this.view.src = href;
 				else shell.openExternal(href);
 			}
 		});
