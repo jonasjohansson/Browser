@@ -49,20 +49,10 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://tiny-massive.slack.com/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
 				url: 'https://trello.com/'
 				// isMuted: false,
 				// icon: ''
 			},
-			{
-				url: 'https://www.notion.so/'
-				// isMuted: false,
-				// icon: ''
-			}
 		]
 	}
 });
