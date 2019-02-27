@@ -19,7 +19,7 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://gmail.com/'
+				url: 'https://keep.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
@@ -34,7 +34,7 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://docs.google.com/document/'
+				url: 'https://translate.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
