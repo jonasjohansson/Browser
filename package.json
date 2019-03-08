@@ -18,7 +18,7 @@
         "favicon-url": "^0.0.5"
     },
     "devDependencies": {
-        "electron": "^4.0.5",
+        "electron": "^4.0.7",
         "electron-builder": "^20.38.5"
     },
     "scripts": {
