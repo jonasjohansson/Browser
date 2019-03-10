@@ -13,8 +13,6 @@ function sendAction(action, arg = null) {
 }
 
 const appMenu = [
-	// { role: 'about' },
-	// { type: 'separator' },
 	{
 		label: 'Preferences…',
 		accelerator: 'Cmd+,',

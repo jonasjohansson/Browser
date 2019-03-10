@@ -62,8 +62,6 @@ aside > div:after {
 
 main {
 	position: absolute;
-	width: 100%;
-	height: calc(100% - var(--aside-width));
 	background-color: white;
 }
 
@@ -80,8 +78,6 @@ webview {
 
 aside {
 	position: fixed;
-	bottom: 0;
-	width: 100%;
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	box-sizing: border-box;
 }
@@ -148,6 +144,27 @@ html:not(.dark-mode) aside {
 html.dark-mode aside {
 	background-color: rgba(0, 0, 0, 0.7);
 	color: white;
+}
+
+html:not(.portrait) main {
+	left: var(--aside-width);
+	width: calc(100% - var(--aside-width));
+	height: 100%;
+}
+
+html:not(.portrait) aside {
+	width: var(--aside-width);
+	height: 100%;
+}
+
+html.portrait main {
+	width: 100%;
+	height: calc(100% - var(--aside-width));
+}
+
+html.portrait aside {
+	width: 100%;
+	bottom: 0;
 }
 
 webview.hidden {
