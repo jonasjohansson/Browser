@@ -3,12 +3,15 @@ const electron = require('electron');
 const path = require('path');
 const config = require('./config');
 const lookup = require('./lookup');
+const bookmarks = config.get('bookmarks');
 
-const { app, BrowserWindow, shell } = electron;
+const { ipcRenderer } = require('electron');
+
+const { app, BrowserWindow, BrowserView, shell } = electron;
 const appName = app.getName();
 
+console.log(app.win);
 function sendAction(action, arg = null) {
-	const win = BrowserWindow.getFocusedWindow();
 	win.webContents.send(action, arg);
 }
 
@@ -64,8 +67,22 @@ const bookmarkMenu = [
 		click() {
 			sendAction('forward');
 		}
-	}
+	},
+	{ type: 'separator' }
 ];
+
+let i = 0;
+for (const bookmarkData of bookmarks) {
+	bookmarkMenu.push({
+		label: bookmarkData.url,
+		accelerator: `CommandOrControl+${i}`,
+		click(i) {
+			console.log(app.win);
+			app.win.setBrowserView(app.views[i - 1]);
+		}
+	});
+	i++;
+}
 
 const windowMenu = [{ role: 'minimize' }, { role: 'close' }];
 

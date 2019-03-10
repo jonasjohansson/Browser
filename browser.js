@@ -80,5 +80,6 @@ ipcRenderer.on('forward', () => {
 });
 
 ipcRenderer.on('showBookmark', (event, arg) => {
-	showBookmark(arg);
+	ipcRenderer.send('showBookmark', 1);
+	// showBookmark(arg);
 });

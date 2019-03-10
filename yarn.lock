@@ -547,7 +547,7 @@ electron-context-menu@^0.11.0:
     electron-dl "^1.2.0"
     electron-is-dev "^1.0.1"
 
-electron-dl@^1.11.0, electron-dl@^1.2.0:
+electron-dl@^1.13.0, electron-dl@^1.2.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/electron-dl/-/electron-dl-1.13.0.tgz#410981363fcee6909860acfd2b376f31ce0faa59"
   integrity sha512-0sg/g7zOuH5TABWSgsqFB275jbRCkIxYq6Nz1lFqMQP/Z93EF2mOo+RPNL1CyFH0dEZLFOvPgwmSMqiPICVOyQ==
@@ -608,10 +608,10 @@ electron-store@^2.0.0:
   dependencies:
     conf "^2.0.0"
 
-electron@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-4.0.8.tgz#b7998b16543d2094f081757a0c5afdb8875ea510"
-  integrity sha512-FOBJIHkuv8wc15N+ZyqwDzPavYVu5CHMBEf14jHDWv7QW2vkEIpJjVK+PIT31kfZfvjsIP0j2wvA/FBsiqB7pw==
+electron@5.0.0-beta.5:
+  version "5.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-5.0.0-beta.5.tgz#0b3cc7417a75b36483943f67987fdb4aea27f3a7"
+  integrity sha512-sBYm1WJ4GwC6KLo8EQKdqY0vGmKf+d1VUt79zKtqnKK19FZ1TktMPpLo8hOBesrxjx19qeX9RYF8z2rP5viKmw==
   dependencies:
     "@types/node" "^10.12.18"
     electron-download "^4.1.0"

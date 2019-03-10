@@ -52,7 +52,7 @@ module.exports = new Store({
 				url: 'https://trello.com/'
 				// isMuted: false,
 				// icon: ''
-			},
+			}
 		]
 	}
 });
