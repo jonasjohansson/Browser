@@ -7,7 +7,7 @@ module.exports = new Store({
 		calendar: 'icons8-calendar-color.svg',
 		contacts: 'icons8-contacts-color.svg',
 		drive: 'icons8-google-drive-color.svg',
-		document: 'icons8-google-docs-color.svg',
+		doc: 'icons8-google-docs-color.svg',
 		facebook: 'icons8-facebook.svg',
 		inbox: 'inbox-color.png',
 		list: 'icons8-list-color.png',
