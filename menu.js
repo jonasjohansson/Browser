@@ -64,8 +64,21 @@ const bookmarkMenu = [
 		click() {
 			sendAction('forward');
 		}
-	}
+	},
+	{ type: 'separator' }
 ];
+
+var step = 0;
+for (const bookmarkData of config.get('bookmarks')) {
+	let i = ++step;
+	bookmarkMenu.push({
+		label: bookmarkData.url,
+		accelerator: `CommandOrControl+${i}`,
+		click() {
+			sendAction('showBookmark', i - 1);
+		}
+	});
+}
 
 const windowMenu = [{ role: 'minimize' }, { role: 'close' }];
 

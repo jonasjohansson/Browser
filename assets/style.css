@@ -62,8 +62,9 @@ aside > div:after {
 
 main {
 	position: absolute;
-	left: var(--aside-width);
-	width: calc(100% - var(--aside-width));
+	/*left: var(--aside-width);*/
+	/*width: calc(100% - var(--aside-width));*/
+	width: 100%;
 	height: 100%;
 	background-color: white;
 }
@@ -81,9 +82,11 @@ webview {
 
 aside {
 	position: fixed;
+	right: 0;
 	height: 100%;
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
 	box-sizing: border-box;
+	display: none;
 }
 
 .bookmark {

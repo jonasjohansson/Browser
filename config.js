@@ -19,11 +19,6 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://keep.google.com/'
-				// isMuted: false,
-				// icon: ''
-			},
-			{
 				url: 'https://calendar.google.com/'
 				// isMuted: false,
 				// icon: ''
@@ -34,12 +29,12 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
-				url: 'https://translate.google.com/'
+				url: 'https://docs.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
 			{
-				url: 'https://docs.google.com/spreadsheets/'
+				url: 'https://spreadsheets.google.com/'
 				// isMuted: false,
 				// icon: ''
 			},
@@ -52,7 +47,7 @@ module.exports = new Store({
 				url: 'https://trello.com/'
 				// isMuted: false,
 				// icon: ''
-			},
+			}
 		]
 	}
 });

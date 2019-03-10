@@ -79,6 +79,6 @@ ipcRenderer.on('forward', () => {
 	currentBookmark.forward();
 });
 
-ipcRenderer.on('showBookmark', (event, arg) => {
-	showBookmark(arg);
+ipcRenderer.on('showBookmark', (event, args) => {
+	showBookmark(args);
 });
