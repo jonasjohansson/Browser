@@ -19,6 +19,11 @@ module.exports = new Store({
 				// icon: ''
 			},
 			{
+				url: 'https://gmail.com/'
+				// isMuted: false,
+				// icon: ''
+			},
+			{
 				url: 'https://calendar.google.com/'
 				// isMuted: false,
 				// icon: ''
