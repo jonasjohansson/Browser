@@ -12,30 +12,16 @@
 	"main": "main.js",
 	"dependencies": {
 		"electron-context-menu": "^0.11.0",
-		"electron-dl": "^1.11.0",
+		"electron-dl": "^1.13.0",
 		"electron-store": "^2.0.0",
 		"event-emitter-es6": "^1.1.5",
 		"favicon-url": "^0.0.5"
 	},
 	"devDependencies": {
-		"electron": "^4.0.8",
-		"electron-builder": "^20.38.5"
+		"electron": "^4.1.1",
+		"electron-builder": "^20.39.0"
 	},
 	"scripts": {
-		"postinstall": "electron-builder install-app-deps",
-		"dist": "electron-builder --mac"
-	},
-	"build": {
-		"files": [
-			"**/*"
-		],
-		"appId": "se.jonasjohansson.browser",
-		"mac": {
-			"category": "public.app-category.social-networking",
-			"target": [
-				"dir"
-			],
-			"electronUpdaterCompatibility": ">=2.16.0"
-		}
+		"dist": "node build.js"
 	}
 }
