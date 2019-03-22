@@ -8,6 +8,9 @@ const config = require('./config');
 
 download.directory = app.getPath('desktop');
 
+// https://medium.com/missive-app/make-your-electron-app-dark-mode-compatible-c23dcfdd0dfa
+// https://electronjs.org/docs/tutorial/mojave-dark-mode-guide
+
 let win = null;
 let isQuitting = false;
 
