@@ -56,6 +56,8 @@ class Bookmark extends EventEmitter {
 			let messageCount = /\(([0-9]+)\)/.exec(title);
 			messageCount = messageCount ? Number(messageCount[1]) : 0;
 
+			if (title.includes('Slack')) messageCount = title.indexOf('*') > -1 ? 1 : 0;
+
 			this.handle.classList.toggle('unread', messageCount);
 			this.handle.setAttribute('data-message-count', messageCount);
 			this.emit('page-title-updated', this);
