@@ -53,6 +53,16 @@ module.exports = new Store({
 				url: 'https://trello.com/'
 				// isMuted: false,
 				// icon: ''
+			},
+			{
+				url: 'https://slack.com/'
+				// isMuted: false,
+				// icon: ''
+			},
+			{
+				url: 'https://monday.com/'
+				// isMuted: false,
+				// icon: ''
 			}
 		]
 	}
