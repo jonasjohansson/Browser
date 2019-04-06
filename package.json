@@ -1,6 +1,6 @@
 {
-	"name": "Browser",
-	"productName": "Browser",
+	"name": "Homie",
+	"productName": "Homie",
 	"version": "1.0.0",
 	"description": "Minimal bookmark browser",
 	"license": "MIT",
@@ -18,7 +18,7 @@
 		"favicon-url": "^0.0.5"
 	},
 	"devDependencies": {
-		"electron": "^4.1.1",
+		"electron": "^4.1.4",
 		"electron-builder": "^20.39.0"
 	},
 	"scripts": {
