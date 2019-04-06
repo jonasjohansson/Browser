@@ -2,12 +2,24 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require('electron');
 const { download } = require('electron-dl');
 const electron = require('electron');
+// const contextMenu = require('electron-context-menu');
 const tray = require('./tray');
 const menu = require('./menu');
 const config = require('./config');
 
+// contextMenu({
+// 	prepend: (params, browserWindow) => [
+// 		{
+// 			label: 'Rainbow',
+// 			// Only show it when right-clicking images
+// 			visible: params.mediaType === 'image'
+// 		}
+// 	]
+// });
+
 download.directory = app.getPath('desktop');
 
+// https://github.com/sindresorhus/electron-context-menu
 // https://medium.com/missive-app/make-your-electron-app-dark-mode-compatible-c23dcfdd0dfa
 // https://electronjs.org/docs/tutorial/mojave-dark-mode-guide
 
